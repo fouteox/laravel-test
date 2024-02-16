@@ -18,7 +18,7 @@ services:
         - traefik.http.routers.laravel.entrypoints=websecure
 #        - traefik.http.routers.laravel.tls.certresolver=production
         - traefik.http.routers.laravel.tls=true
-#        - traefik.http.services.laravel.loadbalancer.server.port=80
+        - traefik.http.services.laravel.loadbalancer.server.port=80
 #    ports:
 #      # HTTP
 #      - target: 80
