@@ -4,9 +4,9 @@ services:
     build:
       context: .
       target: frankenphp_prod
-    environment:
-      FRANKENPHP_CONFIG: ""
-      CADDY_SERVER_EXTRA_DIRECTIVES: "tls /etc/caddy/certs/tls.pem /etc/caddy/certs/tls.key"
-      CADDY_GLOBAL_OPTIONS: local_certs
+#    environment:
+#      FRANKENPHP_CONFIG: ""
+#      CADDY_SERVER_EXTRA_DIRECTIVES: "tls /etc/caddy/certs/tls.pem /etc/caddy/certs/tls.key"
+#      CADDY_GLOBAL_OPTIONS: local_certs
     volumes:
       - /frankenphp/certs:/etc/caddy/certs:ro
