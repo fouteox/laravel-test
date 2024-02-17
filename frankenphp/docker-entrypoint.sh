@@ -16,6 +16,7 @@ if [ "$1" = 'frankenphp' ]; then
 
 	if [ -z "$(ls -A 'vendor/' 2>/dev/null)" ]; then
     		composer install --prefer-dist --no-progress --no-interaction
+    		php artisan key:generate
     fi
 
 	setfacl -R -m u:www-data:rwX -m u:"$(whoami)":rwX storage bootstrap/cache
