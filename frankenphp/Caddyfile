@@ -14,7 +14,7 @@
 	root * /app/public
 	encode zstd br gzip
 
-	tls /etc/caddy/certs/tls.pem /etc/caddy/certs/tls.key
+	{$CADDY_SERVER_EXTRA_DIRECTIVES}
 
 	# Disable Topics tracking if not enabled explicitly: https://github.com/jkarlin/topics
 	header ?Permissions-Policy "browsing-topics=()"
