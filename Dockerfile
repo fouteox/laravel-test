@@ -80,7 +80,7 @@ COPY --link . ./
 RUN rm -Rf frankenphp/
 
 RUN set -eux; \
-    mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache; \
+    mkdir -p storage/framework/ storage/framework/sessions storage/framework/views storage/framework/cache storage/framework/testing storage/logs bootstrap/cache; \
     chmod -R a+rw storage; \
 	composer install --classmap-authoritative --no-interaction --no-ansi --no-dev; \
 	php artisan storage:link;
