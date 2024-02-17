@@ -10,7 +10,6 @@ services:
       LARAVEL_VERSION: ${LARAVEL_VERSION:-}
       STABILITY: ${STABILITY:-stable}
       CADDY_GLOBAL_OPTIONS: debug
-      FRANKENPHP_CONFIG:
     volumes:
       - caddy_data:/data
       - caddy_config:/config
