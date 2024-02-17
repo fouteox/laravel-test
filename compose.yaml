@@ -17,6 +17,7 @@ services:
         - traefik.enable=true
         - traefik.http.routers.laravel.rule=Host(`laravel-test.local.florianoster.com`) || Host(`laravel-test.florianoster.com`)
         - traefik.http.routers.laravel.entrypoints=web
+        - traefik.http.routers.laravel.tls=true
         - traefik.http.routers.laravel.service=laravel-service
         - traefik.http.services.laravel-service.loadbalancer.server.port=80
 #    ports:
