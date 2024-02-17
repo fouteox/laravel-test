@@ -9,7 +9,7 @@ services:
       # The two next lines can be removed after initial installation
       LARAVEL_VERSION: ${LARAVEL_VERSION:-}
       STABILITY: ${STABILITY:-stable}
-      CADDY_GLOBAL_OPTIONS: debug
+      CADDY_GLOBAL_OPTIONS: debug local_certs
     volumes:
       - caddy_data:/data
       - caddy_config:/config
