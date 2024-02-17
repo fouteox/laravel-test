@@ -6,3 +6,5 @@ services:
       target: frankenphp_prod
     volumes:
       - /frankenphp/certs:/etc/caddy/certs:ro
+    env_file:
+      - .env.prod.local
