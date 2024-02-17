@@ -15,9 +15,12 @@ if [ "$1" = 'frankenphp' ]; then
 	fi
 
 	if [ -z "$(ls -A 'vendor/' 2>/dev/null)" ]; then
-    		cp .env.example .env
     		composer install --prefer-dist --no-progress --no-interaction
-    		php artisan key:generate
+    fi
+
+    if [ ! -f .env ]; then
+        cp .env.example .env
+    	php artisan key:generate
     fi
 
 	setfacl -R -m u:www-data:rwX -m u:"$(whoami)":rwX storage bootstrap/cache
