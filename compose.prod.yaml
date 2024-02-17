@@ -5,4 +5,4 @@ services:
       context: .
       target: frankenphp_prod
     environment:
-      FRANKENPHP_CONFIG:
+      FRANKENPHP_CONFIG: ""
