@@ -9,13 +9,13 @@ services:
       # The two next lines can be removed after initial installation
       LARAVEL_VERSION: ${LARAVEL_VERSION:-}
       STABILITY: ${STABILITY:-stable}
-      CADDY_GLOBAL_OPTIONS: local_certs
+      CADDY_GLOBAL_OPTIONS: local_certs debug
     volumes:
       - caddy_data:/data
       - caddy_config:/config
     labels:
         - traefik.enable=true
-        - traefik.http.routers.laravel.rule=Host(`laravel-test.local.florianoster.com`) || Host(`laravel-test.florianoster.com`)
+        - traefik.http.routers.laravel.rule=Host(`laravel-test.florianoster.com`)
         - traefik.http.routers.laravel.entrypoints=websecure
         - traefik.http.routers.laravel.tls=true
 #    ports:
