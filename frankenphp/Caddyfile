@@ -18,5 +18,5 @@
 
 	php_server
 
-	tls off
+	tls disable
 }
