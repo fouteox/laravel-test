@@ -13,11 +13,6 @@ services:
     volumes:
       - caddy_data:/data
       - caddy_config:/config
-    labels:
-        - traefik.enable=true
-        - traefik.http.routers.laravel.rule=Host(`${DOMAIN_NAME}`)
-        - traefik.http.routers.laravel.entrypoints=websecure
-        - traefik.http.routers.laravel.tls=true
 
 volumes:
   caddy_data:
