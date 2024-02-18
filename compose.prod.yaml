@@ -1,6 +1,4 @@
 # Production environment override
-include:
-  - compose.yaml
 services:
   php:
     build:
